@@ -41,7 +41,7 @@ var AgentWorlds = {
        if (!callback) throw new Error('You must use callback! for example, when person joins this link then you must do this!')
      var socket = io('https://kindhearted-tulip.glitch.me/roomtrack')
      socket.on('trackroom',function (id){
-        callback.apply(this,[id])
+        callback(id)
      })
     },
     
