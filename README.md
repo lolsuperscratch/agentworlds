@@ -8,7 +8,7 @@
 
 # Usage
 Ping Pong Bot:
-```node
+```js
   var AgentWorlds = require('agentworlds')
   var agentclient = AgentWorlds.start("AGENT_NAME") // default agent name is F1 and inculde the room
   agentclient.socket.on('r_speak',function(msg,id) {
@@ -20,7 +20,7 @@ Ping Pong Bot:
   })
 ```
 Echo Bot:
-```node
+```js
   var AgentWorlds = require('agentworlds')
   var agentclient = AgentWorlds.start("AGENT_NAME") // default agent name is F1 and inculde the room
   agentclient.socket.on('r_speak',function(msg,id) {
@@ -31,7 +31,5 @@ Echo Bot:
   })
 ```
 
-# Why this keep making error?
-Because you dont have socket.io-client added. Add 'socket.io-client' module to avoid this error.
-if you have module added but this will make error.
+
 
