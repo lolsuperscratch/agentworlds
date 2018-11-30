@@ -34,6 +34,20 @@ var AgentWorlds = {
        },
        connect:function (){
          socket.connect()
+       },
+       put:function (fn) {
+           var fn2 = fn(this,false)
+           if (!fn2.agentworlds) throw new Error('This is not a agentworlds plugin.',
+                                                'PLUGIN WIKI: https://github.com/lolsuperscratch/agentworlds/wiki/Plugins')
+           if (!fn2.github_url) throw new Error('Must use github repo to make users to create issue',
+                                               'PLUGIN WIKI: https://github.com/lolsuperscratch/agentworlds/wiki/Plugins')
+           if (fn2.github_url == "https://github.com/user/repo") throw new Error('Must use github repo to make users to create issue but do not make same!',
+                                                                                'PLUGIN WIKI: https://github.com/lolsuperscratch/agentworlds/wiki/Plugins')
+           try {
+           fn(this,true)
+           } catch(e) {
+               throw new Error(e.message,' not you as plugin owner? create issue at '+fn2.github_url+'/issues')
+           }
        }
      }
     },
