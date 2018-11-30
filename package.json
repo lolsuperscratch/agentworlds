@@ -2,7 +2,18 @@
  "name":"agentworlds",
  "version":"1.1.0",
  "main":"index.js",
- "dependenices":{
+ "dependencies":{
     "socket.io-client":"*"
- }
+ },
+ "homepage": "https://github.com/lolsuperscratch/agentworlds#readme",
+ "bugs":{ 
+  "url" : "https://github.com/lolsuperscratch/agentworlds/issues"
+ },
+ "keywords":[
+    "socket.io",
+    "clippy",
+    "agent",
+    "worlds",
+    "client"
+ ]
 }
